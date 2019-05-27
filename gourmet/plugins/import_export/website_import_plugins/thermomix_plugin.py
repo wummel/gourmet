@@ -100,7 +100,7 @@ def parse_schema_recipe(soup, recipe):
         # replace images in the text with alternative text since they
         # are sometimes used in place
         for img in tag.find_all('img'):
-            img.string = "["+get_alt_text(img)+"]"
+            img.string = translate_image_text("["+get_alt_text(img)+"]")
         recipe['instructions'] = tag.get_text()
     tag = soup.find("div", attrs={"class": "tips"})
     if tag:
@@ -138,6 +138,24 @@ def get_alt_text(img):
     src = img["src"]
     name = src.split("/")[-1]
     return name
+
+
+def translate_image_text(text):
+    """Replace known icon images with translated text.
+    @param text: the image text to replace
+    @ptype text: string
+    @return: translated text if image text was known, else the original text
+    @rtype: string
+    """
+    if text == "[Closed lid]":
+        return _("[Closed lid]")
+    if text == "[Dough mode]":
+        return _("[Dough mode]")
+    if text == "[Counter-clockwise operation]":
+        return _("[Counter-clockwise operation]")
+    if text == "[Gentle stir setting]":
+        return _("[Gentle stir setting]")
+    return text
 
 
 def parse_schema_ingredients(soup):
