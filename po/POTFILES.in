@@ -153,6 +153,7 @@ gourmet/plugins/import_export/website_import_plugins/__init__.py
 gourmet/plugins/import_export/website_import_plugins/about_dot_com_plugin.py
 gourmet/plugins/import_export/website_import_plugins/allrecipes_plugin.py
 gourmet/plugins/import_export/website_import_plugins/foodnetwork_plugin.py
+gourmet/plugins/import_export/website_import_plugins/thermomix_plugin.py
 [type: gettext/ini]gourmet/plugins/key_editor.gourmet-plugin.in
 gourmet/plugins/key_editor/__init__.py
 gourmet/plugins/key_editor/keyEditor.py

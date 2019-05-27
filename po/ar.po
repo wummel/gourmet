@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grecipe-manager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-09 17:34-0800\n"
+"POT-Creation-Date: 2019-05-28 00:39+0200\n"
 "PO-Revision-Date: 2012-07-08 18:15+0000\n"
 "Last-Translator: Ibrahim Saed <ibraheem5000@gmail.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #. Set up hard-coded functional buttons...
 #: ../ui/app.ui.h:2 ../ui/generic_importer.ui.h:5
-#: ../gourmet/importers/interactive_importer.py:146
+#: ../gourmet/importers/interactive_importer.py:147
 msgid "_New Recipe"
 msgstr "و_صفة جديدة"
 
@@ -189,7 +189,7 @@ msgstr "*"
 msgid "Database _Name:"
 msgstr ""
 
-#: ../ui/databaseChooser.ui.h:13 ../gourmet/GourmetRecipeManager.py:1061
+#: ../ui/databaseChooser.ui.h:13 ../gourmet/GourmetRecipeManager.py:1071
 #: ../gourmet/shopgui.py:674
 msgid "_File"
 msgstr "_ملف"
@@ -236,8 +236,8 @@ msgid "_Browse"
 msgstr ""
 
 #: ../ui/databaseChooser.ui.h:22 ../gourmet/gglobals.py:156
-#: ../gourmet/gtk_extras/dialog_extras.py:810
-#: ../gourmet/gtk_extras/dialog_extras.py:1169
+#: ../gourmet/gtk_extras/dialog_extras.py:818
+#: ../gourmet/gtk_extras/dialog_extras.py:1177
 msgid "_Details"
 msgstr "_تفاصيل"
 
@@ -367,7 +367,7 @@ msgid "Pre_paration Time:"
 msgstr ""
 
 #: ../ui/recCardDescriptionEditor.ui.h:15
-#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:29
+#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:31
 #: ../gourmet/recindex.py:41 ../gourmet/recindex.py:49
 msgid "category"
 msgstr "تصنيف"
@@ -448,7 +448,7 @@ msgstr ""
 msgid "Edit _notes"
 msgstr ""
 
-#: ../ui/recCardDisplay.ui.h:17 ../gourmet/exporters/exporter.py:615
+#: ../ui/recCardDisplay.ui.h:17 ../gourmet/exporters/exporter.py:616
 #: ../gourmet/plugins/duplicate_finder/recipeMerger.py:488
 #: ../gourmet/plugins/import_export/html_plugin/html_exporter.py:60
 msgid "Recipe"
@@ -564,7 +564,7 @@ msgstr "الفئة"
 #. gobject.TYPE_NONE,
 #. ()),
 #. }
-#: ../ui/shopCatEditor.ui.h:2 ../gourmet/plugins/key_editor/keyEditor.py:512
+#: ../ui/shopCatEditor.ui.h:2 ../gourmet/plugins/key_editor/keyEditor.py:514
 #: ../gourmet/plugins/key_editor/recipeEditorPlugin.py:109
 #: ../gourmet/plugins/nutritional_information/nutritionInfoEditor.py:188
 #: ../gourmet/reccard.py:2166 ../gourmet/reccard.py:2223
@@ -731,28 +731,28 @@ msgid "recipes;cooking;nutrition;nutritional information;shopping lists;"
 msgstr ""
 
 #. Convenience method for showing progress dialogs for import/export/deletion
-#: ../gourmet/GourmetRecipeManager.py:119
+#: ../gourmet/GourmetRecipeManager.py:128
 msgid "Import paused"
 msgstr "علق الاستيراد"
 
-#: ../gourmet/GourmetRecipeManager.py:120
+#: ../gourmet/GourmetRecipeManager.py:129
 msgid "Stop import"
 msgstr "اوقف الاستيراد"
 
-#: ../gourmet/GourmetRecipeManager.py:202
-#: ../gourmet/GourmetRecipeManager.py:1102
+#: ../gourmet/GourmetRecipeManager.py:211
+#: ../gourmet/GourmetRecipeManager.py:1112
 msgid "Recipe _Index"
 msgstr "_فهرسة الوصفات"
 
-#: ../gourmet/GourmetRecipeManager.py:203
+#: ../gourmet/GourmetRecipeManager.py:212
 msgid "Shopping _List"
 msgstr "_قائمة المشتريات"
 
-#: ../gourmet/GourmetRecipeManager.py:222 ../gourmet/reccard.py:211
+#: ../gourmet/GourmetRecipeManager.py:231 ../gourmet/reccard.py:211
 msgid "_Go"
 msgstr "_اذهب"
 
-#: ../gourmet/GourmetRecipeManager.py:341
+#: ../gourmet/GourmetRecipeManager.py:350
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
@@ -764,221 +764,221 @@ msgstr ""
 "  zeyad alhendi https://launchpad.net/~all4tux\n"
 "  صقر بن عبدالله https://launchpad.net/~agari"
 
-#: ../gourmet/GourmetRecipeManager.py:387
+#: ../gourmet/GourmetRecipeManager.py:396
 msgid ""
 "Please consider making a donation to support our continued effort to fix "
 "bugs, implement features, and help users!"
 msgstr ""
 
-#: ../gourmet/GourmetRecipeManager.py:392
+#: ../gourmet/GourmetRecipeManager.py:401
 msgid "Donate via PayPal"
 msgstr ""
 
-#: ../gourmet/GourmetRecipeManager.py:394
+#: ../gourmet/GourmetRecipeManager.py:403
 msgid "Micro-donate via Flattr"
 msgstr ""
 
-#: ../gourmet/GourmetRecipeManager.py:396
+#: ../gourmet/GourmetRecipeManager.py:405
 msgid "Donate weekly via Gratipay"
 msgstr ""
 
-#: ../gourmet/GourmetRecipeManager.py:424
+#: ../gourmet/GourmetRecipeManager.py:433
 msgid "Saved!"
 msgstr "حفظ"
 
-#: ../gourmet/GourmetRecipeManager.py:434
+#: ../gourmet/GourmetRecipeManager.py:443
 #, python-format
 msgid "Save your edits to %s"
 msgstr "حفظ التعديلات في %s"
 
-#: ../gourmet/GourmetRecipeManager.py:445
+#: ../gourmet/GourmetRecipeManager.py:454
 msgid "An import is in progress."
 msgstr "استيراد قيد التنفيذ"
 
-#: ../gourmet/GourmetRecipeManager.py:446
+#: ../gourmet/GourmetRecipeManager.py:455
 msgid "An export is in progress."
 msgstr "تصدير قيد التنفيذ"
 
-#: ../gourmet/GourmetRecipeManager.py:447
+#: ../gourmet/GourmetRecipeManager.py:456
 msgid "A delete is in progress."
 msgstr "الإلغاء قيد التنفيذ"
 
-#: ../gourmet/GourmetRecipeManager.py:449
+#: ../gourmet/GourmetRecipeManager.py:458
 msgid "Exit program anyway?"
 msgstr "اخرج من البرنامج علي اي حال"
 
-#: ../gourmet/GourmetRecipeManager.py:451
+#: ../gourmet/GourmetRecipeManager.py:460
 msgid "Don't exit!"
 msgstr "لا تخرج"
 
-#: ../gourmet/GourmetRecipeManager.py:497
+#: ../gourmet/GourmetRecipeManager.py:506
 #, python-format
 msgid "Permanently deleted %s of %s recipes"
 msgstr "امسح %s من وصفات %s  كليا"
 
-#: ../gourmet/GourmetRecipeManager.py:515
-#: ../gourmet/GourmetRecipeManager.py:531
+#: ../gourmet/GourmetRecipeManager.py:524
+#: ../gourmet/GourmetRecipeManager.py:540
 msgid "Trash"
 msgstr "نفاية"
 
-#: ../gourmet/GourmetRecipeManager.py:532
+#: ../gourmet/GourmetRecipeManager.py:541
 msgid "Browse, permanently delete or undelete deleted recipes"
 msgstr "تصفح,كليا امسح او ابقي الوصفات المحذوفة"
 
-#: ../gourmet/GourmetRecipeManager.py:584
+#: ../gourmet/GourmetRecipeManager.py:593
 msgid "Undeleted recipes "
 msgstr "وصفات لم تحذف "
 
-#: ../gourmet/GourmetRecipeManager.py:660
+#: ../gourmet/GourmetRecipeManager.py:669
 msgid "Gourmet Recipe Manager starting up..."
 msgstr "مدير الوصفات قورمية يبداء....."
 
-#: ../gourmet/GourmetRecipeManager.py:669
+#: ../gourmet/GourmetRecipeManager.py:679
 msgid "Starting gourmet..."
 msgstr "بدءا قورمية....."
 
-#: ../gourmet/GourmetRecipeManager.py:760
+#: ../gourmet/GourmetRecipeManager.py:770
 #, python-format
 msgid "Number of %(unit)s of %(title)s to shop for"
 msgstr "عدد %(unit)s من %(title)s للتبضع"
 
-#: ../gourmet/GourmetRecipeManager.py:772
+#: ../gourmet/GourmetRecipeManager.py:782
 #, python-format
 msgid "Multiply %s by:"
 msgstr "ضاعف %s بمقدار :"
 
-#: ../gourmet/GourmetRecipeManager.py:792
+#: ../gourmet/GourmetRecipeManager.py:802
 #, python-format
 msgid "Set %(attributes)s for %(num)s selected recipe?"
 msgid_plural "Set %(attributes)s for %(num)s selected recipes?"
 msgstr[0] "حدد %(attributes)s لكل %(num)s الوصفات المختارة؟"
 
-#: ../gourmet/GourmetRecipeManager.py:799
+#: ../gourmet/GourmetRecipeManager.py:809
 msgid "Any previously existing values will not be changed."
 msgstr "اي قيمة موجودة حاليا لن تتغير"
 
-#: ../gourmet/GourmetRecipeManager.py:801
+#: ../gourmet/GourmetRecipeManager.py:811
 msgid "The new values will overwrite any previously existing values."
 msgstr "القيم الجديدة سوف تحل محل القيم الموجودة حاليا"
 
-#: ../gourmet/GourmetRecipeManager.py:802
+#: ../gourmet/GourmetRecipeManager.py:812
 msgid "This change cannot be undone."
 msgstr "لايمكن القيام بالتغير"
 
-#: ../gourmet/GourmetRecipeManager.py:803
+#: ../gourmet/GourmetRecipeManager.py:813
 msgid "Set values for selected recipes"
 msgstr "حدد القيم للوصفات المختارة"
 
-#: ../gourmet/GourmetRecipeManager.py:1008
+#: ../gourmet/GourmetRecipeManager.py:1018
 msgid "Search recipes"
 msgstr "البحث في الوصفات"
 
-#: ../gourmet/GourmetRecipeManager.py:1038
+#: ../gourmet/GourmetRecipeManager.py:1048
 msgid "Open recipe"
 msgstr "افتح الوصفة"
 
-#: ../gourmet/GourmetRecipeManager.py:1039
+#: ../gourmet/GourmetRecipeManager.py:1049
 msgid "Open selected recipe"
 msgstr "افتح الوصفة المحددة"
 
 #. We no longer bind "Delete" here -- instead, we'll do it
 #. at the TreeView level to prevent the delete key
 #. elsewhere (e.g. in search box) from muddling up users.
-#: ../gourmet/GourmetRecipeManager.py:1043
+#: ../gourmet/GourmetRecipeManager.py:1053
 msgid "Delete recipe"
 msgstr "امسح الوصفة"
 
-#: ../gourmet/GourmetRecipeManager.py:1044
+#: ../gourmet/GourmetRecipeManager.py:1054
 msgid "Delete selected recipes"
 msgstr "احذف الوصفات المختارة"
 
-#: ../gourmet/GourmetRecipeManager.py:1045
+#: ../gourmet/GourmetRecipeManager.py:1055
 msgid "Edit recipe"
 msgstr ""
 
-#: ../gourmet/GourmetRecipeManager.py:1046
+#: ../gourmet/GourmetRecipeManager.py:1056
 msgid "Open selected recipes in recipe editor view"
 msgstr ""
 
-#: ../gourmet/GourmetRecipeManager.py:1048
+#: ../gourmet/GourmetRecipeManager.py:1058
 msgid "E_xport selected recipes"
 msgstr "ص_در الوصفات المختارة"
 
-#: ../gourmet/GourmetRecipeManager.py:1049
+#: ../gourmet/GourmetRecipeManager.py:1059
 msgid "Export selected recipes to file"
 msgstr "صدر الوصفات المختارو الي ملف"
 
-#: ../gourmet/GourmetRecipeManager.py:1051
+#: ../gourmet/GourmetRecipeManager.py:1061
 msgid "_Print"
 msgstr "ا_طبع"
 
 #. ('Email', None, _('E-_mail recipes'),
 #. None,None,self.email_recs),
-#: ../gourmet/GourmetRecipeManager.py:1055
+#: ../gourmet/GourmetRecipeManager.py:1065
 msgid "Batch _edit recipes"
 msgstr "_حرر الوصفات دفعة واحدة"
 
-#: ../gourmet/GourmetRecipeManager.py:1062 ../gourmet/reccard.py:210
+#: ../gourmet/GourmetRecipeManager.py:1072 ../gourmet/reccard.py:210
 #: ../gourmet/reccard.py:890 ../gourmet/shopgui.py:652
 msgid "_Edit"
 msgstr "_تحرير"
 
-#: ../gourmet/GourmetRecipeManager.py:1063
+#: ../gourmet/GourmetRecipeManager.py:1073
 msgid "_Actions"
 msgstr "الإ_جراءات"
 
-#: ../gourmet/GourmetRecipeManager.py:1064
+#: ../gourmet/GourmetRecipeManager.py:1074
 msgid "Setti_ngs"
 msgstr "الاعدا_دات"
 
-#: ../gourmet/GourmetRecipeManager.py:1065
-#: ../gourmet/GourmetRecipeManager.py:1070 ../gourmet/reccard.py:212
+#: ../gourmet/GourmetRecipeManager.py:1075
+#: ../gourmet/GourmetRecipeManager.py:1080 ../gourmet/reccard.py:212
 #: ../gourmet/reccard.py:223 ../gourmet/reccard.py:892
 #: ../gourmet/shopgui.py:675 ../gourmet/shopgui.py:677
 msgid "_Help"
 msgstr "_مساعدة"
 
-#: ../gourmet/GourmetRecipeManager.py:1066
+#: ../gourmet/GourmetRecipeManager.py:1076
 msgid "_About"
 msgstr "_عنْ"
 
-#: ../gourmet/GourmetRecipeManager.py:1068
+#: ../gourmet/GourmetRecipeManager.py:1078
 msgid "_New"
 msgstr "_جديد"
 
-#: ../gourmet/GourmetRecipeManager.py:1072
+#: ../gourmet/GourmetRecipeManager.py:1082
 msgid "_Import file"
 msgstr "_استورد ملف"
 
-#: ../gourmet/GourmetRecipeManager.py:1073
+#: ../gourmet/GourmetRecipeManager.py:1083
 msgid "Import recipe from file"
 msgstr "استورد وصفة من ملف"
 
-#: ../gourmet/GourmetRecipeManager.py:1074
+#: ../gourmet/GourmetRecipeManager.py:1084
 msgid "Import _webpage"
 msgstr "استودر _صفحة علي الانترنت"
 
-#: ../gourmet/GourmetRecipeManager.py:1075
+#: ../gourmet/GourmetRecipeManager.py:1085
 msgid "Import recipe from webpage"
 msgstr "استودر وصفة من صفحة علي الانترنت"
 
-#: ../gourmet/GourmetRecipeManager.py:1076
+#: ../gourmet/GourmetRecipeManager.py:1086
 msgid "Export _all recipes"
 msgstr "صدر _جميع الوصفات"
 
-#: ../gourmet/GourmetRecipeManager.py:1077
+#: ../gourmet/GourmetRecipeManager.py:1087
 msgid "Export all recipes to file"
 msgstr "صدر جميع الوصفات الي ملف"
 
-#: ../gourmet/GourmetRecipeManager.py:1078
+#: ../gourmet/GourmetRecipeManager.py:1088
 msgid "_Plugins"
 msgstr "_إضافات"
 
-#: ../gourmet/GourmetRecipeManager.py:1079
+#: ../gourmet/GourmetRecipeManager.py:1089
 msgid "Manage plugins which add extra functionality to Gourmet."
 msgstr "ادر الاضافات و التي تزيد من وظائف قورمية"
 
-#: ../gourmet/GourmetRecipeManager.py:1081
+#: ../gourmet/GourmetRecipeManager.py:1091
 msgid "_Preferences"
 msgstr "_تفضيلات"
 
@@ -986,41 +986,41 @@ msgstr "_تفضيلات"
 #. None,None),
 #. ('Undo',gtk.STOCK_UNDO,_('_Undo'),
 #. None,None),
-#: ../gourmet/GourmetRecipeManager.py:1087
+#: ../gourmet/GourmetRecipeManager.py:1097
 msgid "_Quit"
 msgstr "_إنهاء"
 
-#: ../gourmet/GourmetRecipeManager.py:1089
+#: ../gourmet/GourmetRecipeManager.py:1099
 msgid "Open _Trash"
 msgstr "افتح _النفايات"
 
-#: ../gourmet/GourmetRecipeManager.py:1095
+#: ../gourmet/GourmetRecipeManager.py:1105
 msgid "_Tools"
 msgstr "أد_وات"
 
-#: ../gourmet/GourmetRecipeManager.py:1096
+#: ../gourmet/GourmetRecipeManager.py:1106
 msgid "_Timer"
 msgstr "المؤقت"
 
-#: ../gourmet/GourmetRecipeManager.py:1097
+#: ../gourmet/GourmetRecipeManager.py:1107
 msgid "Show timer"
 msgstr "عرض المؤَقّت"
 
-#: ../gourmet/GourmetRecipeManager.py:1103
+#: ../gourmet/GourmetRecipeManager.py:1113
 msgid "Searchable index of recipes in the database."
 msgstr "فهرسة يمكن البحث فيها في قواعد البينات"
 
-#: ../gourmet/GourmetRecipeManager.py:1213
+#: ../gourmet/GourmetRecipeManager.py:1223
 #, python-format
 msgid "Delete %s?"
 msgstr "امسح %s?"
 
-#: ../gourmet/GourmetRecipeManager.py:1214
+#: ../gourmet/GourmetRecipeManager.py:1224
 #, python-format
 msgid "You have unsaved changes to %s. Are you sure you want to delete?"
 msgstr "يوجد تعديلا لم تحفظ لي %s هل انت متأكد من عملية المسح"
 
-#: ../gourmet/GourmetRecipeManager.py:1236
+#: ../gourmet/GourmetRecipeManager.py:1246
 #, fuzzy, python-format
 msgid ""
 "You just moved %s recipe to the trash. You can recover this recipe or "
@@ -1037,64 +1037,64 @@ msgstr[1] ""
 "لقد قمت بحذف الوصفات %s الي سلة المهملات. تستطيع التراجع عن ذلك او المسح "
 "قطعيا عن طريق الذهاب الي  ادوان-> افتح سلة المهملات"
 
-#: ../gourmet/GourmetRecipeManager.py:1245
+#: ../gourmet/GourmetRecipeManager.py:1255
 msgid "Deleted"
 msgstr "محذوف"
 
-#: ../gourmet/GourmetRecipeManager.py:1245
-#: ../gourmet/importers/interactive_importer.py:474
+#: ../gourmet/GourmetRecipeManager.py:1255
+#: ../gourmet/importers/interactive_importer.py:475
 msgid "Untitled"
 msgstr "بدون عنوان"
 
-#: ../gourmet/GourmetRecipeManager.py:1253
+#: ../gourmet/GourmetRecipeManager.py:1263
 msgid "Permanently delete recipes?"
 msgstr "احذف الوصفات قطعيا ؟"
 
-#: ../gourmet/GourmetRecipeManager.py:1255
+#: ../gourmet/GourmetRecipeManager.py:1265
 msgid "Permanently delete recipe?"
 msgstr "احذف الوصفة قطعيا ؟"
 
-#: ../gourmet/GourmetRecipeManager.py:1256
+#: ../gourmet/GourmetRecipeManager.py:1266
 #, python-format
 msgid "Are you sure you want to delete the recipe <i>%s</i>"
 msgstr "هل انت متأكد من مسح الوصفة <i>%s</i>"
 
-#: ../gourmet/GourmetRecipeManager.py:1258
+#: ../gourmet/GourmetRecipeManager.py:1268
 msgid "Are you sure you want to delete the following recipes?"
 msgstr "هل انت متأكد من مسح الوصفات التالية ؟"
 
-#: ../gourmet/GourmetRecipeManager.py:1262
+#: ../gourmet/GourmetRecipeManager.py:1272
 #, python-format
 msgid "Are you sure you want to delete the %s selected recipes?"
 msgstr "هل انت متأكد من انك تريد مسح الوصفات المختارة %s"
 
-#: ../gourmet/GourmetRecipeManager.py:1264
+#: ../gourmet/GourmetRecipeManager.py:1274
 msgid "See recipes"
 msgstr "اعرض الوصفات"
 
-#: ../gourmet/GourmetRecipeManager.py:1272
+#: ../gourmet/GourmetRecipeManager.py:1282
 msgid "Delete Recipes"
 msgstr "امسح الوصفات"
 
-#: ../gourmet/GourmetRecipeManager.py:1274
+#: ../gourmet/GourmetRecipeManager.py:1284
 #, fuzzy
 msgid "Recipes deleted"
 msgstr "_فهرسة الوصفات"
 
-#: ../gourmet/GourmetRecipeManager.py:1301
+#: ../gourmet/GourmetRecipeManager.py:1311
 #, python-format
 msgid "Deleted recipe %s"
 msgstr "امسح الوصفة %s"
 
-#: ../gourmet/GourmetRecipeManager.py:1328
+#: ../gourmet/GourmetRecipeManager.py:1338
 msgid "See Trash Now"
 msgstr ""
 
-#: ../gourmet/GourmetRecipeManager.py:1367
+#: ../gourmet/GourmetRecipeManager.py:1377
 msgid "Done!"
 msgstr "تم!"
 
-#: ../gourmet/GourmetRecipeManager.py:1375
+#: ../gourmet/GourmetRecipeManager.py:1385
 msgid "Importing..."
 msgstr "جاري الاستيراد..."
 
@@ -1132,7 +1132,7 @@ msgstr ""
 "تستطيع استخدامها مع نسخة قورمية الاقدم"
 
 #: ../gourmet/backends/db.py:1495
-#: ../gourmet/importers/interactive_importer.py:96 ../gourmet/reccard.py:965
+#: ../gourmet/importers/interactive_importer.py:97 ../gourmet/reccard.py:965
 msgid "New Recipe"
 msgstr "وصفة جديدة"
 
@@ -1306,7 +1306,7 @@ msgid "Recipes successfully exported to <a href=\"file:///%s\">%s</a>"
 msgstr ""
 
 #: ../gourmet/exporters/exporter.py:206 ../gourmet/exporters/exporter.py:208
-#: ../gourmet/exporters/exporter.py:520 ../gourmet/exporters/exporter.py:522
+#: ../gourmet/exporters/exporter.py:523 ../gourmet/exporters/exporter.py:525
 msgid "stars"
 msgstr "ابداء"
 
@@ -1317,12 +1317,12 @@ msgstr "ابداء"
 msgid "optional"
 msgstr "اختياري"
 
-#: ../gourmet/exporters/exporter.py:567
+#: ../gourmet/exporters/exporter.py:568
 #, python-format
 msgid "Exported %(number)s of %(total)s recipes"
 msgstr "صدرت %(number)s من %(total)s الوصفات"
 
-#: ../gourmet/exporters/exporter.py:587
+#: ../gourmet/exporters/exporter.py:588
 msgid "Export complete."
 msgstr "تم التصدير"
 
@@ -1460,69 +1460,69 @@ msgstr "_إيقاف مؤقت"
 msgid "_Stop"
 msgstr "_توقّف"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:473
-#: ../gourmet/gtk_extras/dialog_extras.py:563
+#: ../gourmet/gtk_extras/dialog_extras.py:481
+#: ../gourmet/gtk_extras/dialog_extras.py:571
 msgid "Don't ask me this again."
 msgstr "لا تسألني عن هذا مرة اخرى"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:529
+#: ../gourmet/gtk_extras/dialog_extras.py:537
 msgid "Do you really want to do this"
 msgstr "هل تود فعلا القيام بهاذا"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:741
-#: ../gourmet/importers/importer.py:479
+#: ../gourmet/gtk_extras/dialog_extras.py:749
+#: ../gourmet/importers/importer.py:487
 msgid "excellent"
 msgstr "ممتاز"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:742
-#: ../gourmet/importers/importer.py:480
+#: ../gourmet/gtk_extras/dialog_extras.py:750
+#: ../gourmet/importers/importer.py:488
 msgid "great"
 msgstr "عظيم"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:743
-#: ../gourmet/importers/importer.py:481
+#: ../gourmet/gtk_extras/dialog_extras.py:751
+#: ../gourmet/importers/importer.py:489
 msgid "good"
 msgstr "جيد"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:744
-#: ../gourmet/importers/importer.py:482
+#: ../gourmet/gtk_extras/dialog_extras.py:752
+#: ../gourmet/importers/importer.py:490
 msgid "fair"
 msgstr "مقبول"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:745
-#: ../gourmet/importers/importer.py:484
+#: ../gourmet/gtk_extras/dialog_extras.py:753
+#: ../gourmet/importers/importer.py:492
 msgid "poor"
 msgstr "رديء"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:757
+#: ../gourmet/gtk_extras/dialog_extras.py:765
 msgid "Convert ratings to 5 star scale."
 msgstr "حول التقيم الي مقياس الخمس نجوم"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:758
+#: ../gourmet/gtk_extras/dialog_extras.py:766
 msgid "Convert ratings."
 msgstr "حول التقيم"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:759
+#: ../gourmet/gtk_extras/dialog_extras.py:767
 msgid "Please give each of the ratings an equivalent on a scale of 1 to 5"
 msgstr "الرجاء منح كل تقيم ما يعادلها على المقياس من 1 إلى 5"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:772
+#: ../gourmet/gtk_extras/dialog_extras.py:780
 msgid "Current Rating"
 msgstr "التقيم الحالي"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:777
+#: ../gourmet/gtk_extras/dialog_extras.py:785
 msgid "Rating out of 5 Stars"
 msgstr "التقيم من حمس نجوم"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:1060
+#: ../gourmet/gtk_extras/dialog_extras.py:1068
 msgid "No file selected"
 msgstr "لم يتم تحديد الملف"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:1061
+#: ../gourmet/gtk_extras/dialog_extras.py:1069
 msgid "No file was selected, so the action has been cancelled"
 msgstr "لم يتم تحديد الملف, لذلك تم الغاء الاجراء"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:1166
+#: ../gourmet/gtk_extras/dialog_extras.py:1174
 #, python-format
 msgid ""
 "I'm sorry, I can't understand\n"
@@ -1531,12 +1531,12 @@ msgstr ""
 "عذرا لم افهم\n"
 "الكمية \"%s\""
 
-#: ../gourmet/gtk_extras/dialog_extras.py:1168
+#: ../gourmet/gtk_extras/dialog_extras.py:1176
 msgid ""
 "Amounts must be numbers (fractions or decimals), ranges of numbers, or blank."
 msgstr "الكميات لابد ان تكون رقمية (كسر او عشرى) او تسلسل اعداد, او فارغ"
 
-#: ../gourmet/gtk_extras/dialog_extras.py:1170
+#: ../gourmet/gtk_extras/dialog_extras.py:1178
 msgid ""
 "\n"
 "The \"unit\" must be in the \"unit\" field by itself.\n"
@@ -1555,6 +1555,14 @@ msgstr ""
 "\n"
 "لكي تدخل مجموعة من القيم لابد ان تفصل كل قيمة عن الاخرى بالمز \"-\"\n"
 "مثلا, تستطيع ادخال 2-4 او 1 1/2 - 3 1/2\n"
+
+#: ../gourmet/gtk_extras/dialog_extras.py:1192
+msgid "Username"
+msgstr ""
+
+#: ../gourmet/gtk_extras/dialog_extras.py:1192
+msgid "Password"
+msgstr ""
 
 #. self._hide_warning_slowly()
 #. return
@@ -1583,13 +1591,13 @@ msgid "yield"
 msgstr "محصول"
 
 #: ../gourmet/importers/html_importer.py:41
-#: ../gourmet/importers/webextras.py:21 ../gourmet/importers/webextras.py:83
+#: ../gourmet/importers/webextras.py:22 ../gourmet/importers/webextras.py:84
 #, python-format
 msgid "Retrieving %s"
 msgstr "استرداد %s"
 
 #: ../gourmet/importers/html_importer.py:44
-#: ../gourmet/importers/webextras.py:86
+#: ../gourmet/importers/webextras.py:87
 msgid "Retrieving file"
 msgstr "استرداد  الملف"
 
@@ -1675,7 +1683,7 @@ msgstr[5] "servings"
 msgid "Imported %s of %s recipes."
 msgstr "استيراد %s من وصفات %s"
 
-#: ../gourmet/importers/importer.py:483
+#: ../gourmet/importers/importer.py:491
 msgid "okay"
 msgstr "حسنا"
 
@@ -1703,11 +1711,11 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: ../gourmet/importers/interactive_importer.py:103
+#: ../gourmet/importers/interactive_importer.py:104
 msgid "Import recipe"
 msgstr "استيراد الوصفة"
 
-#: ../gourmet/importers/interactive_importer.py:148
+#: ../gourmet/importers/interactive_importer.py:149
 msgid "Clear _Tags"
 msgstr "ازل _السمات"
 
@@ -1721,20 +1729,20 @@ msgstr "ازل _السمات"
 #. self.action_area.pack_start(tag_button,expand=False,fill=False,padding=6)
 #. tag_button.show()
 #.
-#: ../gourmet/importers/interactive_importer.py:195
+#: ../gourmet/importers/interactive_importer.py:196
 msgid "Import Recipe"
 msgstr ""
 
-#: ../gourmet/importers/interactive_importer.py:473
+#: ../gourmet/importers/interactive_importer.py:474
 msgid "Select recipe image"
 msgstr "اختر صورة الوصفة"
 
-#: ../gourmet/importers/interactive_importer.py:474
+#: ../gourmet/importers/interactive_importer.py:475
 #, python-format
 msgid "Select image for recipe \"%s\""
 msgstr "اختر صورة للوصفة \"%s\""
 
-#: ../gourmet/importers/interactive_importer.py:475
+#: ../gourmet/importers/interactive_importer.py:476
 msgid ""
 "Below are all the images found for the page you are importing. Select any "
 "images that are of the recipe, or don't select anything if you don't want "
@@ -1748,7 +1756,7 @@ msgstr ""
 msgid "Imported %s recipes."
 msgstr "الوصفات %s المستوردة"
 
-#: ../gourmet/importers/webextras.py:14
+#: ../gourmet/importers/webextras.py:15
 #, python-format
 msgid "Downloading %s"
 msgstr "تحميل %s"
@@ -2338,11 +2346,11 @@ msgstr "صدر الوصفات بصيغة PDF %(file)s."
 msgid "Recipe saved as PDF %(file)s"
 msgstr "الوصفات حفظت بصيغة PDF %(file)s"
 
-#: ../gourmet/plugins/import_export/pdf_plugin/print_plugin.py:38
+#: ../gourmet/plugins/import_export/pdf_plugin/print_plugin.py:49
 msgid "Could not find Adobe Reader on your system."
 msgstr ""
 
-#: ../gourmet/plugins/import_export/pdf_plugin/print_plugin.py:39
+#: ../gourmet/plugins/import_export/pdf_plugin/print_plugin.py:50
 msgid ""
 "This version of Gourmet Recipe Manager requires Adobe Reader to be able to "
 "print; other PDF viewers will not work.\n"
@@ -2351,11 +2359,11 @@ msgid ""
 "viewer."
 msgstr ""
 
-#: ../gourmet/plugins/import_export/pdf_plugin/print_plugin.py:58
+#: ../gourmet/plugins/import_export/pdf_plugin/print_plugin.py:69
 msgid "Page Layout"
 msgstr "تنسيق الصفحة"
 
-#: ../gourmet/plugins/import_export/pdf_plugin/print_plugin.py:148
+#: ../gourmet/plugins/import_export/pdf_plugin/print_plugin.py:161
 msgid "Print Recipes"
 msgstr "اطبع الوصفة"
 
@@ -2427,6 +2435,27 @@ msgstr ""
 msgid "Importers for about.com, www.foodnetwork.com, and others"
 msgstr ""
 
+#: ../gourmet/plugins/import_export/website_import_plugins/thermomix_plugin.py:113
+#: ../gourmet/shopgui.py:473
+msgid "Category:"
+msgstr "الفئة:"
+
+#: ../gourmet/plugins/import_export/website_import_plugins/thermomix_plugin.py:151
+msgid "[Closed lid]"
+msgstr ""
+
+#: ../gourmet/plugins/import_export/website_import_plugins/thermomix_plugin.py:153
+msgid "[Dough mode]"
+msgstr ""
+
+#: ../gourmet/plugins/import_export/website_import_plugins/thermomix_plugin.py:155
+msgid "[Counter-clockwise operation]"
+msgstr ""
+
+#: ../gourmet/plugins/import_export/website_import_plugins/thermomix_plugin.py:157
+msgid "[Gentle stir setting]"
+msgstr ""
+
 #: ../gourmet/plugins/key_editor.gourmet-plugin.in.h:1
 #: ../gourmet/plugins/key_editor/keyeditor.ui.h:1
 msgid "Key Editor"
@@ -2447,7 +2476,7 @@ msgstr "مفتاح"
 
 #: ../gourmet/plugins/key_editor/keyEditor.py:87
 #: ../gourmet/plugins/key_editor/keyEditor.py:262
-#: ../gourmet/plugins/key_editor/keyEditor.py:538
+#: ../gourmet/plugins/key_editor/keyEditor.py:540
 msgid "item"
 msgstr "عنصر"
 
@@ -2535,11 +2564,11 @@ msgstr ""
 "حول \"%(amount)s\" %(unit)s الي \"%(text)s\" %(unit)s فقط عندما يكون مفتاح "
 "المقادير  %(key)s _و عندما يكون العنصر هو %(item)s"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:357
+#: ../gourmet/plugins/key_editor/keyEditor.py:359
 msgid "Change all selected rows?"
 msgstr "غير جميع الصفوف المختارة ؟"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:358
+#: ../gourmet/plugins/key_editor/keyEditor.py:360
 #, python-format
 msgid ""
 "This action will not be undoable. Are you that for all %s selected rows, you "
@@ -2548,7 +2577,7 @@ msgstr ""
 "هذا العمل لن يمكن التراجع عنة, هل انت متأكد من ان الصفوف المختارة %s , تريد "
 "تحديد القيم التالية"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:359
+#: ../gourmet/plugins/key_editor/keyEditor.py:361
 #, python-format
 msgid ""
 "\n"
@@ -2557,7 +2586,7 @@ msgstr ""
 "\n"
 "المفتاح الي %s"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:360
+#: ../gourmet/plugins/key_editor/keyEditor.py:362
 #, python-format
 msgid ""
 "\n"
@@ -2566,7 +2595,7 @@ msgstr ""
 "\n"
 "العناصر الي %s"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:361
+#: ../gourmet/plugins/key_editor/keyEditor.py:363
 #, python-format
 msgid ""
 "\n"
@@ -2575,7 +2604,7 @@ msgstr ""
 "\n"
 "الوحدات الي %s"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:362
+#: ../gourmet/plugins/key_editor/keyEditor.py:364
 #, python-format
 msgid ""
 "\n"
@@ -2584,7 +2613,7 @@ msgstr ""
 "\n"
 "الكميات الي %s"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:495
+#: ../gourmet/plugins/key_editor/keyEditor.py:497
 #: ../gourmet/plugins/nutritional_information/nutritionInfoEditor.py:164
 #, python-format
 msgid "%s ingredient"
@@ -2598,26 +2627,26 @@ msgstr[5] "%s ingredients"
 
 #. Do not translate bottom, top and total -- I use these fancy formatting
 #. strings in case your language needs the order changed!
-#: ../gourmet/plugins/key_editor/keyEditor.py:499
+#: ../gourmet/plugins/key_editor/keyEditor.py:501
 #: ../gourmet/plugins/nutritional_information/nutritionInfoEditor.py:168
 #, python-format
 msgid "Showing ingredients %(bottom)s to %(top)s of %(total)s"
 msgstr "عرض المقاير %(bottom)s الي %(top)s من %(total)s"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:513
+#: ../gourmet/plugins/key_editor/keyEditor.py:515
 #: ../gourmet/plugins/key_editor/recipeEditorPlugin.py:101
 #: ../gourmet/plugins/nutritional_information/nutritionInfoEditor.py:189
 #: ../gourmet/reccard.py:2165 ../gourmet/reccard.py:2192
 msgid "Item"
 msgstr "عنصر"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:514
+#: ../gourmet/plugins/key_editor/keyEditor.py:516
 #: ../gourmet/plugins/nutritional_information/nutritionModel.py:8
 #: ../gourmet/reccard.py:2164 ../gourmet/reccard.py:2191
 msgid "Unit"
 msgstr "وحدة"
 
-#: ../gourmet/plugins/key_editor/keyEditor.py:515
+#: ../gourmet/plugins/key_editor/keyEditor.py:517
 #: ../gourmet/plugins/nutritional_information/nutritionModel.py:7
 msgid "Amount"
 msgstr "الكمية"
@@ -3685,40 +3714,40 @@ msgid ""
 "the 'Encoding' dialog when you import files."
 msgstr ""
 
-#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:24
+#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:26
 #: ../gourmet/recindex.py:36 ../gourmet/recindex.py:46
 #: ../gourmet/recindex.py:467
 msgid "anywhere"
 msgstr "اي مكان"
 
-#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:25
+#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:27
 #: ../gourmet/recindex.py:37 ../gourmet/recindex.py:47
 msgid "title"
 msgstr "عنوان"
 
-#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:26
+#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:28
 #: ../gourmet/recindex.py:38 ../gourmet/recindex.py:48
 msgid "ingredient"
 msgstr "مقدار"
 
-#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:27
+#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:29
 #: ../gourmet/recindex.py:39 ../gourmet/recindex.py:53
 msgid "instructions"
 msgstr "تعليمات"
 
-#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:28
+#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:30
 #: ../gourmet/recindex.py:40 ../gourmet/recindex.py:54
 msgid "notes"
 msgstr "ملاحظات"
 
-#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:30
+#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:32
 #: ../gourmet/recindex.py:42 ../gourmet/recindex.py:50
 msgid "cuisine"
 msgstr "مطبخ"
 
 #. _('rating'):'rating',
 #. _('rating'),
-#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:31
+#: ../gourmet/plugins/web_plugin/gourmetweb/recview/views.py:33
 #: ../gourmet/recindex.py:44 ../gourmet/recindex.py:52
 msgid "source"
 msgstr "مصدر"
@@ -4051,10 +4080,6 @@ msgstr "ادخل الفئة"
 #, python-format
 msgid "Category to add %s to"
 msgstr "تضاف الفئة  %s الي"
-
-#: ../gourmet/shopgui.py:473
-msgid "Category:"
-msgstr "الفئة:"
 
 #: ../gourmet/shopgui.py:586
 msgid "_Recipes"
