@@ -29,7 +29,7 @@ class URLReader (gourmet.threadManager.SuspendableThread):
         if hasattr(sock,'headers'):
             fs = int(sock.headers.get('content-length',-1)) # file size..
             self.content_type = sock.headers.get('content-type')
-            print 'CONTENT TYPE = ',self.content_type
+            print('CONTENT TYPE = ',self.content_type)
         else:
             fs = -1
         block = sock.read(bs)
@@ -59,7 +59,7 @@ def read_socket_w_progress (sock, suspendableThread=None, message=None):
         block = sock.read(bs)
         data = block
         sofar = bs
-        print "FETCHING:",data
+        print("FETCHING:",data)
         while block:
             if fs>0:
                 suspendableThread.emit('progress',float(sofar)/fs, message)
@@ -68,16 +68,16 @@ def read_socket_w_progress (sock, suspendableThread=None, message=None):
             sofar += bs
             block = sock.read(bs)
             data += block
-            print "FETCHED:",block
+            print("FETCHED:",block)
     sock.close()
-    print "FETCHED ",data
-    print "DONE FETCHING"
+    print("FETCHED ",data)
+    print("DONE FETCHING")
     suspendableThread.emit('progress',1, message)
     return data
 
 def get_url (url, suspendableThread):
     """Return data from URL, possibly displaying progress."""
-    if type(url) in [str,unicode]:
+    if isinstance(url, str):
         socket.setdefaulttimeout(URLOPEN_SOCKET_TIMEOUT)
         sock = urllib2.urlopen(url)
         socket.setdefaulttimeout(DEFAULT_SOCKET_TIMEOUT)
@@ -111,4 +111,3 @@ def getdatafromurl(url, content_type_check=None):
     except urllib2.URLError as msg:
         warn("could not get data from URL %r: %s" % (url, msg))
     return data, url
-

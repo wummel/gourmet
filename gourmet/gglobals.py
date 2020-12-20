@@ -1,73 +1,36 @@
-import os, os.path, gobject, re, gtk
-import tempfile
-from gdebug import debug
-from OptionParser import args
-from util import windows
+import os
+import os.path
+from pathlib import Path
 
-tmpdir = tempfile.gettempdir()
+from gettext import gettext as _
+from gi.repository import Gdk, GdkPixbuf, Gtk
 
-if args.gourmetdir:
-    gourmetdir = args.gourmetdir
-    debug("User specified gourmetdir %s"%gourmetdir,0)
-else:
-    if os.name =='nt':
-        # Under Windows, we cannot unfortunately just use os.environ, see
-        # http://stackoverflow.com/questions/2608200/problems-with-umlauts-in-python-appdata-environvent-variable
-        # We might drop this workaround with Python 3 (all strings are unicode)
-        # and/or GTK+ 3 (use Glib.get_home_dir()).
-        APPDATA = windows.getenv(u'APPDATA').decode('utf-8')
-        gourmetdir = os.path.join(APPDATA,'gourmet')
-    else:
-        gourmetdir = os.path.join(os.path.expanduser('~'),'.gourmet')
-try:
-    if not os.path.exists(gourmetdir):
-        debug('Creating %s'%gourmetdir,0)
-        os.makedirs(gourmetdir)
-except OSError:
-    try:
-        debug("Unable to create standard config directory in home directory. Looking for .gourmet in working directory instead.",0)
-        gourmetdir = '.gourmet'
-        if not os.path.exists(gourmetdir):
-            debug("Creating .gourmet in working directory",0)
-            os.makedirs(gourmetdir)
-    except OSError:
-        print "Unable to create gourmet directory."
-        raise
-        import sys
-        sys.exit()
+from .optionparser import args
+from . import settings
 
-
-if not os.access(gourmetdir,os.W_OK):
-    debug('Cannot write to configuration directory, %s'%gourmetdir,-1)
-    import sys
-    sys.exit()
-
-debug('gourmetdir=%s'%gourmetdir,2)
-
-use_threads = args.threads
-# Uncomment the below to test FauxThreads
-#use_threads = False
-
-# note: this stuff must be kept in sync with changes in setup.py
-import settings
 uibase = os.path.join(settings.ui_base)
 lib_dir = os.path.join(settings.lib_dir)
 
-# To have strings from .ui files (gtk.Builder) translated on all platforms,
-# we need the following module to enable localization on all platforms.
-try:
-    import elib.intl
-    elib.intl.install('gourmet', settings.locale_base)
-except ImportError:
-    print 'elib.intl failed to load.'
-    print 'IF YOU HAVE TROUBLE WITH TRANSLATIONS, MAKE SURE YOU HAVE THIS LIBRARY INSTALLED.'
-from gettext import gettext as _
+gourmetdir: Path = Path(os.environ['HOME']).absolute() / '.gourmet'
+if os.name == 'nt':
+    gourmetdir = Path(os.environ['APPDATA']).absolute() / 'gourmet'
 
+if args.gourmetdir:
+    gourmetdir = Path(args.gourmetdir).absolute()
+    print(f'User specified gourmetdir {gourmetdir}')
+
+gourmetdir.mkdir(exist_ok=True)
+
+use_threads = args.threads
+# Uncomment the below to test FauxThreads
+# use_threads = False
+
+# note: this stuff must be kept in sync with changes in setup.py
 data_dir = settings.data_dir
-imagedir = os.path.join(settings.data_dir,'images')
-style_dir = os.path.join(settings.data_dir,'style')
+imagedir = os.path.join(settings.data_dir, 'images')
+style_dir = os.path.join(settings.data_dir, 'style')
 
-icondir = os.path.join(settings.icon_base,"48x48","apps")
+icondir = os.path.join(settings.icon_base, '48x48', 'apps')
 doc_base = settings.doc_base
 plugin_base = settings.plugin_base
 
@@ -75,42 +38,42 @@ plugin_base = settings.plugin_base
 if args.html_plugin_dir:
     html_plugin_dir = args.html_plugin_dir
 else:
-    html_plugin_dir = os.path.join(gourmetdir,'html_plugins')
+    html_plugin_dir = os.path.join(gourmetdir, 'html_plugins')
     if not os.path.exists(html_plugin_dir):
         os.makedirs(html_plugin_dir)
-        template_file = os.path.join(settings.data_dir,'RULES_TEMPLATE')
+        template_file = os.path.join(settings.data_dir, 'RULES_TEMPLATE')
         if os.path.exists(template_file):
             import shutil
             shutil.copy(template_file,
-                        os.path.join(html_plugin_dir,'RULES_TEMPLATE')
+                        os.path.join(html_plugin_dir, 'RULES_TEMPLATE')
                         )
 
-REC_ATTRS = [('title',_('Title'),'Entry'),
-             ('category',_('Category'),'Combo'),
-             ('cuisine',_('Cuisine'),'Combo'),
-             ('rating',_('Rating'),'Entry'),
-             ('source',_('Source'),'Combo'),
-             ('link',_('Website'),'Entry'),
-             ('yields',_('Yield'),'Entry'),
-             ('yield_unit',_('Yield Unit'),'Combo'),
-             ('preptime',_('Preparation Time'),'Entry'),
-             ('cooktime',_('Cooking Time'),'Entry'),
+REC_ATTRS = [('title', _('Title'), 'Entry'),
+             ('category', _('Category'), 'Combo'),
+             ('cuisine', _('Cuisine'), 'Combo'),
+             ('rating', _('Rating'), 'Entry'),
+             ('source', _('Source'), 'Combo'),
+             ('link', _('Website'), 'Entry'),
+             ('yields', _('Yield'), 'Entry'),
+             ('yield_unit', _('Yield Unit'), 'Combo'),
+             ('preptime', _('Preparation Time'), 'Entry'),
+             ('cooktime', _('Cooking Time'), 'Entry'),
              ]
 
-INT_REC_ATTRS = ['rating','preptime','cooktime']
+INT_REC_ATTRS = ['rating', 'preptime', 'cooktime']
 FLOAT_REC_ATTRS = ['yields']
-TEXT_ATTR_DIC = {'instructions':_('Instructions'),
-                 'modifications':_('Notes'),
+TEXT_ATTR_DIC = {'instructions': _('Instructions'),
+                 'modifications': _('Notes'),
                  }
 
-REC_ATTR_DIC={}
-NAME_TO_ATTR = {_('Instructions'):'instructions',
-                _('Notes'):'modifications',
-                _('Modifications'):'modifications',
+REC_ATTR_DIC = {}
+NAME_TO_ATTR = {_('Instructions'): 'instructions',
+                _('Notes'): 'modifications',
+                _('Modifications'): 'modifications',
                 }
 
 DEFAULT_ATTR_ORDER = ['title',
-                      #'servings',
+                      # 'servings',
                       'yields',
                       'cooktime',
                       'preptime',
@@ -122,58 +85,66 @@ DEFAULT_ATTR_ORDER = ['title',
                       ]
 
 DEFAULT_TEXT_ATTR_ORDER = ['instructions',
-                           'modifications',]
+                           'modifications',
+                           ]
 
-def build_rec_attr_dic ():
+
+def build_rec_attr_dic():
     for attr, name, widget in REC_ATTRS:
-        REC_ATTR_DIC[attr]=name
-        NAME_TO_ATTR[name]=attr
+        REC_ATTR_DIC[attr] = name
+        NAME_TO_ATTR[name] = attr
+
 
 build_rec_attr_dic()
 
 DEFAULT_HIDDEN_COLUMNS = [REC_ATTR_DIC[attr] for attr in
-                          ['link','yields','yield_unit','preptime','cooktime']
-                          ]
-
-from gtk_extras import dialog_extras
-
-def launch_url (url, ext=""):
-    if os.name == 'nt':
-        os.startfile(url)
-    elif os.name == 'posix':
-        try:
-            gtk.show_uri(gtk.gdk.Screen(),url,0L)
-        except gobject.GError, err:
-            #print dir(err)
-            label = _('Unable to open URL')
-            for reg, msg in [('mailto:',_('Unable to launch mail reader.')),
-                             ('http:',_('Unable to open website.')),
-                             ('file:',_('Unable to open file.'))]:
-                if re.match(reg,url.lower()): label = msg
-            dialog_extras.show_message(
-                label=label,
-                sublabel=err.message,
-                expander=[_('_Details'),
-                          _("There was an error launching the url: %s"%url)]
-                )
+                          ('link', 'yields', 'yield_unit', 'preptime', 'cooktime')]  # noqa
 
 # Set up custom STOCK items and ICONS!
-icon_factory = gtk.IconFactory()
+icon_factory = Gtk.IconFactory()
 
-def add_icon (file_name, stock_id, label=None, modifier=0, keyval=0):
-    pb = gtk.gdk.pixbuf_new_from_file(file_name)
-    iconset = gtk.IconSet(pb)
-    icon_factory.add(stock_id,iconset)
+
+def add_icon(file_name, stock_id, label=None, modifier=0, keyval=0):
+    pb = GdkPixbuf.Pixbuf.new_from_file(file_name)
+    iconset = Gtk.IconSet.new_from_pixbuf(pb)
+    icon_factory.add(stock_id, iconset)
     icon_factory.add_default()
-    gtk.stock_add([(stock_id,
+    # TODO: fix adding icons
+    return
+    Gtk.stock_add([(stock_id,
                     label,
                     modifier,
                     keyval,
                     "")])
 
-for filename,stock_id,label,modifier,keyval in [
-    ('AddToShoppingList.png','add-to-shopping-list',_('Add to _Shopping List'),gtk.gdk.CONTROL_MASK,gtk.gdk.keyval_from_name('l')),
-    ('reccard.png','recipe-card',None,0,0),
-    ('reccard_edit.png','edit-recipe-card',None,0,0),
-    ]:
-    add_icon(os.path.join(imagedir,filename),stock_id,label,modifier,keyval)
+
+for filename, stock_id, label, modifier, keyval in [
+    ('AddToShoppingList.png',
+     'add-to-shopping-list',
+     _('Add to _Shopping List'),
+     Gdk.ModifierType.CONTROL_MASK,
+     Gdk.keyval_from_name('l')),
+
+    ('reccard.png', 'recipe-card', None, 0, 0),
+
+    ('reccard_edit.png', 'edit-recipe-card', None, 0, 0),
+     ]:
+    add_icon(os.path.join(imagedir, filename), stock_id,
+             label, modifier, keyval)
+
+
+# Color scheme preference
+LINK_COLOR = 'blue'
+star_color = 'blue'
+
+style = Gtk.StyleContext.new()
+_, bg_color = style.lookup_color('bg_color')
+_, fg_color = style.lookup_color('fg_color')
+
+if sum(fg_color) > sum(bg_color):  # background is darker
+    LINK_COLOR = 'deeppink'
+    star_color = 'gold'
+
+NO_STAR = Path(__file__).parent / 'data' / 'images' / 'no_star.png'
+HALF_STAR = Path(__file__).parent / 'data' / 'images' / f'half_{star_color}_star.png'  # noqa
+FULL_STAR = Path(__file__).parent / 'data' / 'images' / f'{star_color}_star.png'  # noqa
