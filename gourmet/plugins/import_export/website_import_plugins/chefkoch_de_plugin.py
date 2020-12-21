@@ -8,6 +8,7 @@ from gourmet.gdebug import warn
 from gourmet.isoduration_parser import parse_iso8601_duration
 from gourmet.importers.webextras import getdatafromurl
 from fractions import Fraction
+from .state import WebsiteTestState
 import re
 import json
 
@@ -185,8 +186,8 @@ class ChefkochDePlugin(PluginPlugin):
     def test_url(self, url, data):
         """Return positive integer if this URL should be parsed."""
         if 'chefkoch.de/rezepte/' in url:
-            return 5
-        return 0
+            return WebsiteTestState.SUCCESS
+        return WebsiteTestState.FAILED
 
     def get_importer(self, webpage_importer):
         """Use ChefkochDeParser instead of the default webpage_importer."""

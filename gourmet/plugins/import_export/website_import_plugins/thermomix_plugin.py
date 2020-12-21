@@ -10,6 +10,7 @@ from collections import OrderedDict
 from bs4 import BeautifulSoup, Tag
 from fractions import Fraction
 from gettext import gettext as _
+from .state import WebsiteTestState
 import re
 
 
@@ -247,8 +248,8 @@ class ThermomixPlugin(PluginPlugin):
            'ricettario-bimby.it/' in url or
            'recetario.es/' in url or
            'recipecommunity.co.uk/' in url):
-            return 5
-        return 0
+            return WebsiteTestState.SUCCESS
+        return WebsiteTestState.FAILED
 
     def get_importer(self, webpage_importer):
         """Use ThermomixParser instead of the default webpage_importer."""
