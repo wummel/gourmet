@@ -118,7 +118,11 @@ class html_exporter (exporter_mult):
     def write_attr (self, label, text):
         attr = gglobals.NAME_TO_ATTR.get(label,label)
         if attr=='link':
-            webpage = text.split('/')[2]
+            webpage = text
+            # strip off http: and https: scheme
+            if text.startswith(('http://', 'https://')):
+                webpage = text.split(':', 1)[1][2:]
+            webpage = webpage.split('/')[0]
             self.out.write('<a href="%s">'%text +
                            _('Original Page from %s')%webpage +
                            '</a>\n')
