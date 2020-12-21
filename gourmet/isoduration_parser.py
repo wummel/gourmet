@@ -125,4 +125,4 @@ def convert_to_positive_int(s):
 
 
 if __name__ == '__main__':
-    print parse_iso8601_duration('PT40M')
+    print(parse_iso8601_duration('PT40M'))
