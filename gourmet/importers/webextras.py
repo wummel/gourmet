@@ -1,10 +1,25 @@
-import socket, gourmet.threadManager, urllib2
+import socket, gourmet.threadManager, urllib.request, urllib.error
 from gourmet.gdebug import warn
 from gettext import gettext as _
+from urllib.parse import urlsplit
 DEFAULT_SOCKET_TIMEOUT=45.0
 URLOPEN_SOCKET_TIMEOUT=15.0
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0'
 
 socket.setdefaulttimeout(DEFAULT_SOCKET_TIMEOUT)
+
+def get_url_socket(url):
+    req = urllib.request.Request(url)
+    urlparts = urlsplit(url)
+    # some sites like to have a refererer
+    referer = urlparts.scheme + "://" + urlparts.netloc + "/"
+    req.add_header('Referer', referer)
+    # and a sensible user agent
+    req.add_header('User-Agent', USER_AGENT)
+    socket.setdefaulttimeout(URLOPEN_SOCKET_TIMEOUT)
+    sock = urllib.request.urlopen(req)
+    socket.setdefaulttimeout(DEFAULT_SOCKET_TIMEOUT)
+    return sock
 
 class URLReader (gourmet.threadManager.SuspendableThread):
 
@@ -20,9 +35,7 @@ class URLReader (gourmet.threadManager.SuspendableThread):
 
     def read (self):
         message = _('Retrieving %s'%self.url)
-        socket.setdefaulttimeout(URLOPEN_SOCKET_TIMEOUT)
-        sock = urllib2.urlopen(self.url)
-        socket.setdefaulttimeout(DEFAULT_SOCKET_TIMEOUT)
+        sock = get_url_socket(self.url)
         bs = 1024 * 8 # bite size...
         # Get file size so we can update progress correctly...
         self.content_type = None;
@@ -77,10 +90,8 @@ def read_socket_w_progress (sock, suspendableThread=None, message=None):
 
 def get_url (url, suspendableThread):
     """Return data from URL, possibly displaying progress."""
-    if isinstance(url, str):
-        socket.setdefaulttimeout(URLOPEN_SOCKET_TIMEOUT)
-        sock = urllib2.urlopen(url)
-        socket.setdefaulttimeout(DEFAULT_SOCKET_TIMEOUT)
+    if type(url) in [str,unicode]:
+        sock = get_url_socket(url)
         return read_socket_w_progress(sock,suspendableThread,_('Retrieving %s'%url))
     else:
         sock = url
@@ -100,7 +111,8 @@ def getdatafromurl(url, content_type_check=None):
     """
     data = None
     try:
-        sock = urllib2.urlopen(url)
+        sock = get_url_socket(url)
+        # update URL in case of redirects
         url = sock.geturl()
         if content_type_check:
             content_type = sock.info().get('content-type', 'application/octet-stream')
@@ -108,6 +120,6 @@ def getdatafromurl(url, content_type_check=None):
                 data = sock.read()
         else:
             data = sock.read()
-    except urllib2.URLError as msg:
+    except urllib.error.URLError as msg:
         warn("could not get data from URL %r: %s" % (url, msg))
     return data, url
