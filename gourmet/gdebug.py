@@ -43,7 +43,7 @@ def warn(message):
     if timestamp: ts= '%s:'%time.time()
     else: ts = ''
     finame, line = extract_stack_info()
-    print "WARNING", ts, "%s:%s" % (finame,line), message
+    print("WARNING", ts, "%s:%s" % (finame,line), message)
 
 
 timers = {}
